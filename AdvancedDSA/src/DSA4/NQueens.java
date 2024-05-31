@@ -1,5 +1,7 @@
 package DSA4;
 
+import java.util.Scanner;
+
 public class NQueens {
 	static int N = 7;
 	 
@@ -97,7 +99,13 @@ public class NQueens {
  
     // Driver Code
     public static void main(String[] args) 
-    { 
-        solveNQ(); 
+    {
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Enter the number of Queens (N) : ");
+		if (sc.hasNextInt()) {
+		    N = sc.nextInt();
+		}
+        solveNQ();
+        sc.close();
     }
 }
